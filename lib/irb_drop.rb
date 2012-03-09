@@ -10,12 +10,10 @@ module Kernel
   #   irb_drop(binding)
   def irb_drop(context=nil, *argv)
     require 'irb'
-    require 'pp'
-    require 'yaml'
     restore_trap  = false
     old_trap      = nil
     original_argv = ARGV.dup
-    ARGV.replace(argv) # IRB is being stupid
+    ARGV.replace(argv) # IRB is being stupid (it processes ARGV, destroying it in the process)
     unless defined? ::IRB_SETUP
       IRB.setup(nil)
       Object.const_set(:IRB_SETUP, true)
