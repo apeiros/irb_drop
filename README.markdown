@@ -14,6 +14,11 @@ Installation
 
 Usage
 -----
+Anywhere in your code, you can just place
+
+    binding.irb_drop
+
+That will drop you into an irb session right there.
 
 
 Description

@@ -38,7 +38,7 @@ class Binding
   # @example
   #   binding.irb_drop
   #
-  def irb_drop
-    Kernel.irb_drop(self)
+  def irb_drop(*argv)
+    Kernel.irb_drop(self, *argv)
   end
 end
